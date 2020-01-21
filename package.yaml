@@ -1,5 +1,5 @@
 name:                vformat-aeson
-version:             0.0.1.0
+version:             0.1.0.0
 synopsis:            Use vformat format Aeson
 github:              versioncloud/vformat-aeson
 category:            Text, Format, JSON
