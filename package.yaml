@@ -1,6 +1,6 @@
 name:                vformat-aeson
-version:             0.1.0.0
-synopsis:            Use vformat format Aeson
+version:             0.1.0.1
+synopsis:            Extend vformat to Aeson datatypes
 github:              versioncloud/vformat-aeson
 category:            Text, Format, JSON
 license:             BSD3
