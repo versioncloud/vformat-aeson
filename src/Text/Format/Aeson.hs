@@ -44,7 +44,8 @@ module Text.Format.Aeson ( ) where
 import           Control.Exception
 import           Data.Aeson
 import qualified Data.ByteString.Lazy.Char8 as B
-import qualified Data.HashMap.Strict        as M
+import qualified Data.Aeson.KeyMap          as M
+import qualified Data.Aeson.Key             as K
 import           Data.Scientific            hiding (formatScientific)
 import qualified Data.Text                  as T
 import           Data.Vector
@@ -74,4 +75,4 @@ formatArray (Index i) xs = case (xs !? i) of (Just x) -> formatArg x
 
 formatObject :: ArgKey -> Object -> Formatter
 formatObject (Name k) obj =
-  case (M.lookup (T.pack k) obj) of (Just x) -> formatArg x
+  case (M.lookup (K.fromText (T.pack k)) obj) of (Just x) -> formatArg x
